@@ -63,6 +63,19 @@ palabra = string(input("ingresa una palabra: "))#esto ultimo es redundante, es s
 decimal = float(input("ingresa un decimal: "))
 boolean= bool(input("ingresa un booleano: "))
 ```
-
+### variables
+Nosotros para leer los datos del usuario guardamos la informacion de input en una variable. Por ejemplo, en el codigo
+```py
+nombre = input()
+```
+`nombre` seria una variable. Nosotros podemos imaginar a una variable como un estacionamiento. Los estacionamientos solo pueden tener un auto. Lo mismo pasa con las variables, solo pueden tener un valor. Entonces, las variables *almacenan informacion*. Ahora, nosotros podemos asignarle un valor a una variable, y este valor *lo podemos cambiar*:
+```py
+nombre = "mob"
+apellido = "su"
+print(nombre) #accedemos su valor y lo imprimimos. veremos mob
+nombre = "bom" # cambiamos su valor
+print(nombre) #accedemos nuevamente su valor. veremos bom
+nombre=apellido #podemos asignar el valor de una variable a otra
+```
 
 
