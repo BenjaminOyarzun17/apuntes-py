@@ -76,6 +76,9 @@ print(nombre) #accedemos su valor y lo imprimimos. veremos mob
 nombre = "bom" # cambiamos su valor
 print(nombre) #accedemos nuevamente su valor. veremos bom
 nombre=apellido #podemos asignar el valor de una variable a otra
+print(nombre) #accedemos nuevamente su valor. veremos su
+nombre = 40
+print(nombre)# ahora obtendremos 40.
 ```
-
+notemos que en la ultima linea de codigo, asignamos el valor `40` a una variable que contenia una `string`. Esto en python esta permitido, es decir, podemos reasignarle a una variable un valor de un tipo de dato diferente. Esto, no es posible en lenguajes como `C++` o `Java`, pues estos son conocidos como lenguajes estaticamente tipeados (statically typed).
 
