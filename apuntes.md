@@ -28,6 +28,14 @@ Con esto, ya podemos apreciar lo **simple** que es python para llevar a cabo cie
 La informacion en los lenguajes de programacion tiene una forma especial de ser almacenada (que se vera mas adelante), llamada el "tipo de dato". Es muy importante sabes cuales son, dado que nos permite operar de diferentes maneras entre ellas dependiendo del tipo de dato. 
 Los cuatro tipos de dato mas basicos y frecuentes son los siguientes: 
 - `int`: es un numero entero (-1, 10, 0, 15, ...).
+#### operaciones de enteros: 
+Nosotros podemos sumar, multiplicar, dividir, restar y exponenciar numeros. Existen otras operaciones como el modulo, pero por ahora no son tan importantes:
+```py
+print(1+1)
+print(1-1)
+print(1*10)
+print(1/10)
+```
 - `float`: es un numero decimal (1.8, 1.000, 2.15, -15.21, ...)
 - `string`: corresponde a "una palabra"/ cadena de caracteres. Para utilizar una `string` debemos siempre utilizar las commilas. Asi, nuestras palabras/oraciones se veran de la siguiente manera:
 ```py
@@ -49,8 +57,6 @@ num = int(input("ingresa un numero: "))
 palabra = string(input("ingresa una palabra: "))#esto ultimo es redundante, es solo un ejemplo
 decimal = float(input("ingresa un decimal: "))
 boolean= bool(input("ingresa un booleano: "))
-
-
 ```
 
 
