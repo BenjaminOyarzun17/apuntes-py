@@ -11,6 +11,15 @@ El codigo mas simple que se aprende es el famoso "hola mundo". Asi se ve su impl
 ```python
 print("hello world")
 ```
+este programa genera una salida una vez ejecutado, y podremos leer el mensaje `hello world`.
+Notemos que es un codigo **bastante simple** en comparacion a otros lenguajes, como `C++`:
+```cpp
+#include<iostream>
+using namespace std;
 
-
+int main(){
+	cout<<"hello world"<<endl;
+	return 0;
+}
+```
 
