@@ -6,7 +6,7 @@ Python es un lenguaje de programacion muy popular por su syntax simple y legible
 - cyberseguridad
 y muchas mas areas. 
 
-## hola mundo
+## hola mundo y lenguajes de programacion!
 El codigo mas simple que se aprende es el famoso "hola mundo". Asi se ve su implementacion en python: 
 ```python
 print("hello world")
@@ -22,4 +22,22 @@ int main(){
 	return 0;
 }
 ```
+Con esto, ya podemos apreciar lo **simple** que es python para llevar a cabo ciertas tareas. 
+## Conceptos basicos
+### Tipos de dato
+La informacion en los lenguajes de programacion tiene una forma especial de ser almacenada (que se vera mas adelante), llamada el "tipo de dato". Es muy importante sabes cuales son, dado que nos permite operar de diferentes maneras entre ellas dependiendo del tipo de dato. 
+Los cuatro tipos de dato mas basicos y frecuentes son los siguientes: 
+- `int`: es un numero entero (-1, 10, 0, 15, ...).
+- `float`: es un numero decimal (1.8, 1.000, 2.15, -15.21, ...)
+- `string`: corresponde a "una palabra"/ cadena de caracteres. Para utilizar una `string` debemos siempre utilizar las commilas. Asi, nuestras palabras/oraciones se veran de la siguiente manera:
+```py
+p1= "esta es una string"
+p2= "esta es otra string"
+p3= "3" #esto es una string! no un int!
+```
+- `bool`: corresponde a un valor de verdad. Solo puede ser `True` o `False`. Mas adelante veremos la relevancia de estos.
+
+
+
+
 
