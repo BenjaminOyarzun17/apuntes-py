@@ -42,7 +42,16 @@ Nosotros ya podemos obtener informacion desde python gracias a la funcion `print
 nombre = input()
 edad = input("ingresa tu edad: ") #podemos ingresar una string para generar un prompt para el usuario :D
 ```
+#### typecasting
+un problema que tiene la funcion `input()` es que *siempre nos dara una string*. Esto es malo, por ejemplo, si queremos leer un numero o un bool. La solucion es *cabiar el tipo del input* al deseado utilizando las funciones `int()`, `float()`, `bool()`. Asi, podemos ingresar la informacion de la siguiente manera:
+```py
+num = int(input("ingresa un numero: "))
+palabra = string(input("ingresa una palabra: "))#esto ultimo es redundante, es solo un ejemplo
+decimal = float(input("ingresa un decimal: "))
+boolean= bool(input("ingresa un booleano: "))
 
+
+```
 
 
 
