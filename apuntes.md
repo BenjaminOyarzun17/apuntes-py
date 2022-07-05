@@ -43,6 +43,10 @@ print(2**3)#dos al cubo
 p1= "esta es una string"
 p2= "esta es otra string"
 p3= "3" #esto es una string! no un int!
+suma = "ho"+"la" #nosotros podemos unir strings usando la suma!
+print("hola "*100)#imprime hola cien veces
+
+
 ```
 - `bool`: corresponde a un valor de verdad. Solo puede ser `True` o `False`. Mas adelante veremos la relevancia de estos.
 ### interactuando con python
