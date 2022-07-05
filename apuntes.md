@@ -29,12 +29,13 @@ La informacion en los lenguajes de programacion tiene una forma especial de ser 
 Los cuatro tipos de dato mas basicos y frecuentes son los siguientes: 
 - `int`: es un numero entero (-1, 10, 0, 15, ...).
 #### operaciones de enteros: 
-Nosotros podemos sumar, multiplicar, dividir, restar y exponenciar numeros. Existen otras operaciones como el modulo, pero por ahora no son tan importantes:
+Nosotros podemos sumar (`+`), multiplicar(`*`), dividir (`/`), restar (`-`) y exponenciar (`**`) numeros. Existen otras operaciones como el modulo, pero por ahora no son tan importantes:
 ```py
-print(1+1)
-print(1-1)
-print(1*10)
-print(1/10)
+print(1+1)#uno mas uno
+print(1-1)#uno menos uno
+print(1*10)# uno por diez
+print(1/10)#uno sobre diez
+print(2**3)#dos al cubo
 ```
 - `float`: es un numero decimal (1.8, 1.000, 2.15, -15.21, ...)
 - `string`: corresponde a "una palabra"/ cadena de caracteres. Para utilizar una `string` debemos siempre utilizar las commilas. Asi, nuestras palabras/oraciones se veran de la siguiente manera:
