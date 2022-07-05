@@ -36,7 +36,12 @@ p2= "esta es otra string"
 p3= "3" #esto es una string! no un int!
 ```
 - `bool`: corresponde a un valor de verdad. Solo puede ser `True` o `False`. Mas adelante veremos la relevancia de estos.
-
+### interactuando con python
+Nosotros ya podemos obtener informacion desde python gracias a la funcion `print()`. Ahora, tambien nos gustaria a nosotros **darle** informacion a python. Esto lo podemos lograr **guardando la informacion en una variable** ocupando la funcion `input()`:
+```py
+nombre = input()
+edad = input("ingresa tu edad: ") #podemos ingresar una string para generar un prompt para el usuario :D
+```
 
 
 
