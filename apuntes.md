@@ -272,6 +272,81 @@ while(termimado == true):
 El ultimo programa es especialmente interesante, pues ya podemos hacer un proceso infinito en donde el usuario decida si queremos terminar el programa o no.  
 
 
+# Funciones
+Hemos visto con los loops, que estos nos permiten programar de manera mas corta y simple, evitando ser repetitivo. Ahora, nosotros no solo podemos iterar sobre acciones que son repetitivas, sino que tambien podemos evitar escribir por ejemplo varios `for` o `while` sin reescribir sus contenidos por completo. Esto lo logramos usando las `funciones`. Veamos un ejemplo de como se veria una funcion para encontrar el promedio de dos numeros: 
+```py
+def prom(a, b):
+	div = (a+b)/2
+	return div
+print(prom(1,5))
+print(prom(2,5))
+print(prom(4,7))
+print(prom(9,5))
+```
+notemos primero que las funciones estan precedidas por `def`. Ahora, la sintax de su declaracion es `nombre(argumento 1, argumento 2, ...)`. Las funciones por lo general esperan un input, que llamaremos **argumento** para que lo puedan trabajar. `return` equivale a lo que nuestra funcion retorna; la informacion que terminamos de trabajar. Nosotros ya hemos visto varias funciones. Algunos ejemplos:
+- `int()`: tiene como argumento un valor, y lo transforma en un int. 
+- `str()`: tiene como argumento un valor, y lo transforma en string. 
+- `sort(lista)`: tiene como argumento una lista, y  retrona una version ordenada de esta. 
+- `reverse(lista)`: tiene como argumento una lista, y retorna una version revertida de esta. 
+
+### Indentado y scope
+Un concepto muy relevante en python es el scope y el indentado. El indentado le permite al compilador de python entender donde inicia y termina el codigo que deberia estar *dentro de* un `for`, `if`, `while`, `def`, ... "indentar" es sinonimo de escribir `TAB`. Veamos un ejemplo malo:
+```python
+
+for i in range(0, 10):
+print(i)
+if(i>5):
+print("i mayor que cinco")
+for j in range(5, 10):
+if(j>8):
+print("j mayor que ocho")
+```
+El interpretador de python no podra determinar si el primer `if` esta dentro del primer `for`. de misma forma, no se puede saber si el segundo `for` deberia estar dentro o fuera del primer `for`.
+De hecho, podemos tener por ejemplo dos codigos validos para este ejemplo:
+
+```python
+
+for i in range(0, 10):
+	print(i)
+	if(i>5):
+		print("i mayor que cinco")
+for j in range(5, 10):
+	if(j>8):
+		print("j mayor que ocho")
+```
+y al mismo tiempo tambien es valido que
+```python
+
+for i in range(0, 10):
+	print(i)
+	if(i>5):
+		print("i mayor que cinco")
+	for j in range(5, 10):
+		if(j>8)	:
+			print("j mayor que ocho")
+```
+cada uno tiene resultados notoriamente diferentes. Por este motivo, no queremos que nuestro codigo una vez ejecutado haga dos cosas diferentes para iguales input. Asi, debemos ser muy rigurosos al usar `TAB`, pues asi sabemos si una linea de codigo esta dentro de un ambiente como `for` o `if`. Por otro lado, tenemos el `scope`. Este termino con el indentado esta muy relacionado, pues generalmente para generar un nuevo scope necesitaremos un nuevo nivel de indentado (escribir un TAB mas). Pero, un scope tiene una caracteristica que por lo general solo se da en `FUNCIONES y (clases, que veremos mas adelante)`: nosotros podemos reutilizar un nombre de una variable dentro de una funcion, pues tiene un *scope diferente*, y por eso, funciona casi como un "ambiente diferente" al codigo principal.
+```python
+
+hola = 1
+print(hola)
+def sayHi():
+	hola =2
+	print(hola)
+print(hola)
+```
+veremos que el output sera: `1  2  1`. Si bien nosotros dentro de la funcion asignamos el valor 2 a la variable `hola`, como esta dentro de una funcion, estan en scopes diferentes, y por lo tanto, no se actualizo el valor de `hola` que estaba fuera de esta funcion. 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
