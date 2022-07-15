@@ -209,6 +209,72 @@ if num >=1 or num<=-1:
 
 ```
 
+## Loops
+Hemos llegado a otro de los temas más relevantes de python, y probablemente uno de los más útiles para los lenguajes de programación en general: los *loops*. En python existen dos tipos de loops: `while` y `for`. Ambos tienen la finalidad de ejecutar una cierta cantidad de lineas de codigo de manera *repetitiva*. Si es que nosotros no especificamos un momento para que estas terminen, ocurrira que estas seguiran indefinidamente. Por ejemplo, nosotros podriamos querer imprimir `"hola mundo"` 20 veces. Si bien, podemos escribir 20 `print`, es poco conviente. Con `while` podemos repetir la linea `print('hello world')` 20 veces de la siguiente forma: 
+```python
+i = 1
+while(i<=20);
+	print("hello world")
+	i+=1
+```
+Nosotros iniciamos `i` con el valor 1. Mientras que `i<=20` sea `True`, ejecutaremos nuestro `print` y ademas, sumaremos 1 a `i`, para asi llegar a 20, y no tener un ciclo infinito. Esto tambien se puede lograr con la syntax de `for`:
+```python
+for i in range(1, 21):
+	print("hello world")
+```
+Notemos que aqui no fue necesario iniciar 1, sino que solo definimos un rango con la funcion `range(a, b)` en donde `a` es el inicio del ciclo y `b` es el inicio de este. OJO: `b` es no inclusivo. Asi, el comando se ejecutara para 1, 2, 3, 4, ..., 19, 20.
+Nosotros tambien podemos imprimir `i`:
+
+```python
+for i in range(1, 21):
+	print(i)
+```
+Con esto, nosotros podemos hacer cosas interesantes, como la suma de 100 numeros: 
+```python
+suma= 0
+for i in range(1, 21):
+	suma+=i
+print(suma) 
+```
+Notemos que estamos utilizando el operador `a+=b`. Este se puede entender como `a=a+b`, es decir, al valor de  `a` le sumamos `b`. Tambien existe un operador para la resta: `a-=b`. Por lo general, nosotros podemos usar tanto `while` como `for` para las mismas accciones, pero, con el tiempo, nos daremos cuenta de cuando es mas conveniente usar `while` y cuando usar `for`.
+### Algunos ejemplos de for y while
+```python
+for i in range(1, 101):
+	if i<50:
+		print("menor que 50")
+	else:
+		print("mayor igual que 50")
+
+for i in range (1, 40):
+
+	if i==1:
+		print("uno")
+	elif i==10:
+		print("diez")
+	elif i==39:
+		print("39")
+	else:
+		print("no conozco ese numero...")
+		
+		
+terminado = false
+while(termimado == true):
+	print("ingresa dos numeros positivos, para sumarlos. Si no quieres sumar mas, ingresa cero.")
+	a = int(input())
+	b = int(input())
+	if(a>0 and b>0):
+		print(a+b)
+	else:
+		print("programa terminado")
+		terminado = true
+```
+
+El ultimo programa es especialmente interesante, pues ya podemos hacer un proceso infinito en donde el usuario decida si queremos terminar el programa o no.  
+
+
+
+
+
 
 
 
