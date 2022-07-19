@@ -337,20 +337,63 @@ print(hola)
 ```
 veremos que el output sera: `1  2  1`. Si bien nosotros dentro de la funcion asignamos el valor 2 a la variable `hola`, como esta dentro de una funcion, estan en scopes diferentes, y por lo tanto, no se actualizo el valor de `hola` que estaba fuera de esta funcion. 
 
+# Programacion orientada a objetos
+Python es por definicion un lenguaje orientado a objetos. Esto significa, que ABSOLUTAMENTE TODO en este lenguaje es un objeto. Un objeto lo podemos entender como una categoria, pues las categorias pueden tener caracteristicas especiales, y tambien pueden llevar a cabo actividades especiales. En otras palabras, los objetos pueden contener informacion especial y pueden tener funciones especiales asociadas. A la informacion de estos se les llama *atributos* y a sus funciones se les llama *metodos*. Veamos un ejemplo para la clase de una persona, que genera diferentes objetos de persona: 
+```python
+class Persona:
+	def __init__(self, nombre, edad):
+		self.nombre  = nombre
+		self.edad = edad
+	def saludar(self):
+		print("Hola, mi nombre es "+nombre)
+	def edad(self):
+		print("Hola, mi edad es "+ str(edad))
 
+a = Persona("Benja", 19)#una persona
+b = Persona("Jose", 28)#otra persona diferente
+c = Persona("Diego", 20)
+print(a.nombre)
+print(a.edad)
+a.saludar()
+b.saludar()
+c.saludar()
+a.edad()
+b.edad()
+c.edad()
+```
+Primero que nada, el bloque de `class` corresponde al lugar en donde definimos a nuestra clase, que en este caso se llama `Persona`.
+Luego tenemos una primera funcion especial: `def __init__(self, argumentos..)`.
+Esta linea de codigo permite asignarle un nombre y una edad a un objeto que creemos de nuestra clase. Por esto, nosotros podemos crear una persona usando `a = Persona("Benja", 19)`.
+Nosotros podemos acceder estos atributos de la siguiente forma: `variable.atributo` como por ejemplo `a.nombre`. Notemos que NO tenemos que escribir `(...)`.
+Observacion: un objeto corresponde a una instancia de nuestra clase, es decir, podemos ver a nuestra clase como una plantilla, y a nuestro objeto como la plantilla ya rellenada. "es como crear una persona" 
+Notemos tambien que estamos usando `self`. Por ahora no es tan importante saber lo que es `self`. Solo es importante recordar que TODA FUNCION EN UNA CLASE debe llevar a `self` como argumento. Tambien hay que recordar la syntax para la funcion `__init__`.
+Las funciones `saludar` y `edad` tienen por ejemplo como parametro a `self`. Ahora, estas dos funciones se llaman `metodos` de nuestra clase, pues son acciones que esta puede llevar a cabo.
+Ya vimos que para invocar metodos tenemos que seguir el patron: 
+```python
+variable.metodo(argumentos...)
+```
+# Herencia
+Un concepto importante dentro de la programacion orientada a objetos es la `herencia`. Nosotros anteriormente definimos a una `Persona`. Ahora, nosotros podemos hacer `subtipos` de personas, como ingenieros, medicos, profesores, y muchos mas. Estas son `Persona`, pero al mismo tiempo, deberian tener habilidades *extra* que sean especificas a su clase. Para no tener que volver a implementar a la clase de una persona desde cero, podemos *heredar* los atributos de la clase persona y extenderlos a `nuevas clases`:
+```python
+class Profesor(Persona): 
+	def__init__(self,nombre, edad, curso):
+		super().__init__(self, nombre, edad)
+		self.curso = curso
+	def mostrar_curso(self):
+		print("soy profe de " + curso)
+	def iniciar_clase(self):
+		print("vamos a iniciar nuestra clase de hoy")
+class Medico(Persona):
+	def __init__ (self, nombre, edad, especialidad):
+		super().__init__(self, nombre, edad)
+		self.especialidad = especialidad
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	def diagnosticar(self):
+		print("estas sano")
+a = Profesor("benja", 19, "matematicas")
+b = Medico("Andres", 29, "pediatra")
+a.mostrar_curso()
+a.iniciar_clase()
+b.diagnosticar()
+```
+Primero, para heredar los atributos de la clase `Persona` tenemos que ingresar a esta clase como argumento a la clase `Profesion`. Luego, en `__init__` tenemos que ingresar todos los parametros de `Persona`, y ademas, tenemos que usar la funcion `super().__init__(self, args...)`. Lo demas es similiar a cuando definimos una clase normal.
